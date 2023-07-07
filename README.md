@@ -18,4 +18,6 @@ This application can do
 WILL BE ADDED
 
 # Install
-$ npm install
+```sh
+$ npm install 
+```
