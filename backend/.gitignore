@@ -1,0 +1,3 @@
+# List directories below to ignore pushing to git
+node_modules/
+dist/
