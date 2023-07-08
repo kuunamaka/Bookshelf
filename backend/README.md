@@ -1,3 +1,8 @@
+# Install
+```sh
+$ npm install 
+```
+
 # Run dev environment
 ```sh
 $ npm run dev
