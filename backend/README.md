@@ -1,8 +1,15 @@
-# EsLint, Prettier
-Make sure to update `.vscode/settings.json` as well
+# Install
+```sh
+$ npm install 
 ```
-{
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true
-}
+
+# Run dev environment
+```sh
+$ npm run dev
+```
+access: http://localhost:3000/
+
+# Compile code
+```sh
+$ npm run build
 ```
