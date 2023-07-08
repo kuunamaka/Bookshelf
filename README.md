@@ -16,8 +16,3 @@ This application can do
 
 # Demo
 WILL BE ADDED
-
-# Install
-```sh
-$ npm install 
-```
