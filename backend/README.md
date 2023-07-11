@@ -18,3 +18,11 @@ $ npm run build
 ```sh
 $ npm test
 ```
+
+# Run formatter
+```sh
+$ npm run prettier
+```
+```sh
+$ npm run lint
+```
