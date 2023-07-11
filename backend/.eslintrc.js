@@ -1,11 +1,17 @@
 module.exports = {
-    "env": {
+    parser: "@typescript-eslint/parser",
+    env: {
         "browser": true,
         "es2021": true,
         "node": true
     },
-    "extends": [ "standard-with-typescript", "prettier"],
-    "overrides": [
+    extends: [ 
+        "standard-with-typescript", 
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:prettier/recommended",
+    ],
+    overrides: [
         {
             "env": {
                 "node": true
@@ -18,10 +24,17 @@ module.exports = {
             }
         }
     ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+    parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        project: ["./tsconfig.json"],
     },
-    "rules": {
+    rules: {
+      "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/valid-jsdoc": "off",
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-floating-promises": "error",
+      "prettier/prettier": ["error"]
     }
 }
+  

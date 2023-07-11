@@ -13,3 +13,16 @@ access: http://localhost:3000/
 ```sh
 $ npm run build
 ```
+
+# Run unit-test
+```sh
+$ npm test
+```
+
+# Run formatter
+```sh
+$ npm run prettier
+```
+```sh
+$ npm run lint
+```
