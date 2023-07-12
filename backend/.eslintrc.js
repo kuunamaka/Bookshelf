@@ -9,7 +9,6 @@ module.exports = {
         "standard-with-typescript", 
         "plugin:@typescript-eslint/recommended",
         "prettier",
-        "plugin:prettier/recommended",
     ],
     overrides: [
         {
@@ -31,8 +30,6 @@ module.exports = {
     },
     rules: {
       "@typescript-eslint/restrict-template-expressions": "off",
-      "@typescript-eslint/valid-jsdoc": "off",
-      "@typescript-eslint/no-empty-function": "off",
       "@typescript-eslint/no-floating-promises": "error",
       "prettier/prettier": ["error"]
     }
