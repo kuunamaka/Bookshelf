@@ -5,8 +5,6 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: install npm
-        run: npm install
       - name: run prettier
         run: npm run format
       - name: run eslint
