@@ -21,7 +21,7 @@ $ npm test
 
 # Run formatter
 ```sh
-$ npm run prettier
+$ npm run format
 ```
 ```sh
 $ npm run lint
