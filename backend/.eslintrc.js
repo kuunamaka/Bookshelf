@@ -31,7 +31,6 @@ module.exports = {
     rules: {
       "@typescript-eslint/restrict-template-expressions": "off",
       "@typescript-eslint/no-floating-promises": "error",
-      "prettier/prettier": ["error"]
     }
 }
   
