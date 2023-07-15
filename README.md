@@ -16,3 +16,6 @@ This application can do
 
 # Demo
 WILL BE ADDED
+
+# Using PR template
+add `?template=template1.md` at the end of URL for creating pr
