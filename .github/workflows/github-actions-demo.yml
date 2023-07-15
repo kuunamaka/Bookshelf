@@ -11,4 +11,5 @@ jobs:
         with:
           node-version: '16.x'
       - name: Install dependencies
+        working-directory: ./backend
         run: npm install
