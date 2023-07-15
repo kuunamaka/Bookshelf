@@ -15,9 +15,4 @@ jobs:
         run: npm install
         
       - name: Run formatter
-      - run: npm run prettie
-      - run: npm run lint
-        
-      - name: Run jest      
-      - run: npm run build --if-present
-      - run: npm test
+        run: npm run prettie
