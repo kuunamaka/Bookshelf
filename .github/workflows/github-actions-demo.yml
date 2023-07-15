@@ -2,12 +2,26 @@ name: GitHub Actions
 run-name: formatter and jest are running 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: run prettier
-        run: npm run format
-      - name: run eslint
-        run: npm run lint
-      - name: run jest
-        run: npm run test
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - name: Install dependencies
+        run: npm install
+
+      - uses: actions/checkout@v3
+      - name: run test
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm run test
+      
+      - name: run formatter
+      - run: npm run prettier
+      - run: npm run lint
