@@ -1,15 +1,14 @@
 ## Steps
-1. TypeScript の環境構築  :arrow_left:
-2.  ESLint, Prettier の導入  
-3.  jest を導入して、テスト環境構築
-　Unit Test
-4. Express 導入
-　Express Middlewareの導入
-5. OpenAPI
-　OpenAPI から validation を自動で作成できるライブラリの導入
-　例えば、express-openapi-validator
-6. Docker で PostgreSQL を構築
-7. ORMの導入
+~~1. TypeScript の環境構築~~
+~~2.  ESLint, Prettier の導入~~
+~~3.  jest を導入して、テスト環境構築~~
+　~~Unit Test~~
+~~4. Express 導入~~
+　~~Express Middlewareの導入~~
+~~5. OpenAPI~~
+　~~OpenAPI から validation を自動で作成できるライブラリの導入~~
+~~6. Docker で PostgreSQL を構築~~
+7. ORMの導入  :arrow_left:
 　例えば Prisma
 　マイグレーションできる仕組み
 
