@@ -8,6 +8,10 @@ dotenv.config();
 const app: Express = express();
 const port = process.env.PORT;
 
+app.use(express.json());
+app.use(express.text());
+app.use(express.urlencoded({ extended: false }));
+
 app.use(
   OpenApiValidator.middleware({
     apiSpec: path.join(__dirname, "../../openapi.yaml"),
@@ -16,28 +20,10 @@ app.use(
   })
 );
 
-app.get("/", (req: Request, res: Response) => {
-  console.log("running get /");
-  res.send(test);
-  res.send("Express + TypeScript Server is Built!!");
+app.post("/samples", function (req, res, next) {
+  console.log("Here's samples post roots");
+  return res.json({ message: "success" });
 });
-
-app.listen(5000, () => {
-  console.log("Example app listening on port 5000!");
-});
-
-app.get("/samples", (req: Request, res: Response) => {
-  console.log("running get /sample");
-  res.send("Here's samples get roots");
-});
-
-app.listen(port, () => {
-  console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
-});
-
-// app.post("/samples", function (req, res, next) {
-//   console.log("Here's samples post roots");
-// });
 
 app.use((err: any, req: any, res: any, next: any) => {
   res.status(404).json({
@@ -45,4 +31,8 @@ app.use((err: any, req: any, res: any, next: any) => {
     errors: err.errors,
   });
   console.log("running here");
+});
+
+app.listen(port, () => {
+  console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
 });
