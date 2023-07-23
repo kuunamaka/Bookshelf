@@ -1,6 +1,7 @@
 import express, { type Express, type Request, type Response } from "express";
 import dotenv from "dotenv";
 import * as OpenApiValidator from "express-openapi-validator";
+import path from "path";
 
 dotenv.config();
 
@@ -9,9 +10,9 @@ const port = process.env.PORT;
 
 app.use(
   OpenApiValidator.middleware({
-    apiSpec: "../../../openapi.yaml",
+    apiSpec: path.join(__dirname, "../../openapi.yaml"),
     validateRequests: true,
-    validateResponses: true,
+    validateResponses: false,
   })
 );
 
