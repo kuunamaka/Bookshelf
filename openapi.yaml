@@ -7,51 +7,22 @@ servers:
     description: development
 paths:
   /samples:
-    get:
-      operationId: getBooks
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Sample'
       responses:
         '200':
-          $ref: '#/components/responses/books'
           description: Ok
-    post:
-    responses:
-        '200':
-          description: Ok
+
 components:
   schemas:
-    book:
+    Sample:
       type: object
       properties:
-        id:
-          type: integer
-          example: 01
-        title:
+        name:
           type: string
-          example: Example title
-        author:
-          type: string
-          example: Teresa
-        finished_at:
-          type: string
-          format: date
-          example: '2023-01-01'
       required:
-        - id
-        - title
-        - author
-    books:
-      type: object
-      properties:
-        books:
-          type: array
-          items:
-            $ref: '#/components/schemas/book'
-      required:
-        - books
-  responses:
-    books:
-      description: Array of books
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/books'
+        - name
