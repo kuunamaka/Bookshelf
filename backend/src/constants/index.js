@@ -11,27 +11,17 @@ app.use(OpenApiValidator.middleware({
     validateRequests: true,
     validateResponses: true,
 }));
-app.get("/", function (req, res) {
-    console.log("running get /");
-    res.send(test);
-    res.send("Express + TypeScript Server is Built!!");
-});
 app.listen(5000, function () {
     console.log("Example app listening on port 5000!");
-});
-app.get("/samples", function (req, res) {
-    console.log("running get /sample");
-    res.send("Here's samples get roots");
 });
 app.listen(port, function () {
     console.log("\u26A1\uFE0F[server]: Server is running at http://localhost:".concat(port));
 });
-// app.post("/samples", function (req, res, next) {
-//   console.log("Here's samples post roots");
-// });
+app.post("/samples", function (req, res, next) {
+  console.log("Here's samples post roots");
+});
 app.use(function (err, req, res, next) {
     console.log("running here");
-    // format error
     res.status(500).json({
         message: err.message,
         errors: err.errors,
