@@ -1,0 +1,28 @@
+openapi: 3.0.2
+info:
+  title: Sample api
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: development
+paths:
+  /samples:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Sample'
+      responses:
+        '200':
+          description: Ok
+
+components:
+  schemas:
+    Sample:
+      type: object
+      properties:
+        name:
+          type: string
+      required:
+        - name
