@@ -21,16 +21,15 @@ app.use(
 );
 
 app.post("/samples", function (req, res, next) {
-  console.log("Here's samples post roots");
   return res.json({ message: "success" });
 });
 
 app.use((err: any, req: any, res: any, next: any) => {
-  res.status(404).json({
+  console.error(err);
+  res.status(err.status || 500).json({
     message: err.message,
     errors: err.errors,
   });
-  console.log("***encounter error***");
 });
 
 app.listen(port, () => {
