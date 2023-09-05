@@ -26,3 +26,9 @@ $ npm run format
 ```sh
 $ npm run lint
 ```
+
+# Swagger UI
+```sh
+$ npm run swagger
+```
+access:  http://localhost:8080/
